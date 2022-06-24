@@ -1,0 +1,61 @@
+<app-nav-bar></app-nav-bar>
+
+
+<div class="container page">
+    <div class="row">
+        <div class="col-md-7">
+            <div>
+                <p>Total:{{total}} </p>
+            </div>
+            <div class="left-check p-4">
+                <div class="card mb-3" *ngFor="let product of products">
+                  <div class="product-card">
+                    <div class="left">
+                      <img
+                        [src]="product.image"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                        style="height: 70%; width: 70%;"
+                      />
+                    </div>
+                    <div class="right">
+                      <div class="card-body" style="height: 70%;">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">
+                          {{
+                            product.price| currency: "INR"
+                          }}
+                        </p>
+                        <div class="buttons mt-5 cust-canvas">
+                          <button  type="button" class="btn btn btn-outline">Remove</button>
+                      </div>
+            
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div class="right-check">
+                <div class="card mt-5 p-5 check">
+                    <h5 class="card-header">Order Summary</h5>
+                    <div class="card-body">
+                       <div class="summary-item">
+                        <p>Subtotal<span>{{subTotal}}</span></p>
+                        <p>Delivery Charge (Standard)<span>Free</span></p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

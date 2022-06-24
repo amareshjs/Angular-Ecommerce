@@ -1,0 +1,98 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container page">
+  <div class="row">
+
+    <!-- ----------bracelates------ -->
+    <div class="col-md-3">
+      <div *ngFor="let product of bData; index as i" class="product_card mb-3">
+        <a routerLink="/singleproduct/{{ product.id }}/0/home">
+          <img
+            class="product_img"
+            style="width: 100%"
+            [src]="product.image"
+            alt=""
+          />
+          <p class="product_text">{{ product.name }}</p>
+        </a>
+          <div class="card_content">
+            <div class="price_heart">
+              <p class="product_text">{{ product.price| currency:'INR' }}</p>
+              <div class="icons">
+                <a (click)="addToCart(product.id,'0')"><i class="fa-solid fa-cart-plus heart"></i></a>
+                <a (click)="addToList(product.id,'0')"><i class="fa-solid fa-heart heart"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- -----------earrings-------- -->
+    <div class="col-md-3">
+      <div *ngFor="let product of eData; index as i" class="product_card mb-3">
+        <a routerLink="/singleproduct/{{ product.id }}/1/home">
+          <img
+            class="product_img"
+            style="width: 100%"
+            [src]="product.image"
+            alt=""
+          />
+          <p class="product_text">{{ product.name }}</p>
+        </a>
+          <div class="card_content">
+            <div class="price_heart">
+              <p class="product_text">{{ product.price | currency: "INR" }}</p>
+              <div class="icons">
+                <a (click)="addToCart(product.id,'1')"><i class="fa-solid fa-cart-plus heart"></i></a>
+                <a (click)="addToList(product.id,'1')"><i class="fa-solid fa-heart heart"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div *ngFor="let product of nData; index as i" class="product_card mb-3">
+        <a routerLink="/singleproduct/{{ product.id }}/2/home">
+          <img
+            class="product_img"
+            style="width: 100%"
+            [src]="product.image"
+            alt=""
+          />
+          <p class="product_text">{{ product.name }}</p>
+        </a>
+          <div class="card_content">
+            <div class="price_heart">
+              <p class="product_text">{{ product.price| currency:'INR' }}</p>
+              <div class="icons">
+                <a (click)="addToCart(product.id,'2')"><i class="fa-solid fa-cart-plus heart"></i></a>
+                <a (click)="addToList(product.id,'2')"><i class="fa-solid fa-heart heart"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div *ngFor="let product of rData; index as i" class="product_card mb-3">
+        <a routerLink="/singleproduct/{{ product.id }}/3/home">
+          <img
+            class="product_img"
+            style="width: 100%"
+            [src]="product.image"
+            alt=""
+          />
+          <p class="product_text">{{ product.name }}</p>
+        </a>
+          <div class="card_content">
+            <div class="price_heart">
+              <p class="product_text">{{ product.price | currency:'INR' }}</p>
+              <div class="icons">
+                <a (click)="addToCart(product.id,'3')"><i class="fa-solid fa-cart-plus heart"></i></a>
+                <a (click)="addToList(product.id,'3')"><i class="fa-solid fa-heart heart"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

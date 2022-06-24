@@ -1,0 +1,121 @@
+@import"src/variable.scss";
+
+.up-nav {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 72px;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  background:$background;
+  border: 1px solid $border-color;
+  justify-content: space-between;
+}
+.down-nav {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 100%;
+//   height: 80px;
+  left: 0px;
+  top: 72px;
+
+  background:$background;
+  border: 1px solid $border-color;
+}
+.logo {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color:$text-color;
+  align-self: center;
+  padding-left: 123px;
+}
+.right-menu{
+  padding-inline-end: 125px;
+
+}
+.option-menu {
+  display: inline-grid;
+  margin-inline: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+
+  color:$text-color;
+}
+.options {
+  display: flex;
+  margin-inline: 60px;
+}
+.right-menu {
+  text-align: center;
+  align-self: center;
+}
+.page {
+  justify-content: space-between;
+  // position:fixed;
+  z-index: 99999;
+}
+
+.menus {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color:$text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+//   justify-content: space-between;
+// justify-content: space-around;
+}
+.menu a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color:$text-color;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  margin-inline: 40px;
+//   justify-content: center;
+}
+.menu-icon {
+  padding: 5px;
+}
+.menu-icon img {
+  height: 40px;
+  width: 36px;
+}
+.modal-label{
+  color: $heart-color;
+  font-family:"Montserrat";
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.product-card{
+  display: flex;
+  height:max-content;
+}
+.left{
+  width: 30%;
+}
+.right{
+  width: 70%;
+}
+.cust-canvas{
+  width: 40%;
+}

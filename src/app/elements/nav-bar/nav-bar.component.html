@@ -1,0 +1,166 @@
+<div class="page container-fluid">
+  <div class="up-nav">
+    <div class="logo">Logo</div>
+    <div class="right-menu">
+      <div class="options">
+          <div class="option-menu" 
+          (click)="getList()"
+          data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="fa-solid fa-heart"></i>
+          <label>Wishlist</label>
+        </div>
+        <div class="option-menu">
+          <i class="fa fa-gift"></i>
+          <label>Rewards</label>
+        </div>
+        <div
+          class="option-menu"
+          (click)="getData()"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <i class="fa-solid fa-cart-shopping"></i>
+          <label>Cart</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="down-nav">
+    <div class="menus">
+      <div class="menu">
+        <a routerLink="/products/earring/1">
+          <div class="menu-icon">
+            <img src="assets/earrings.svg" alt="" />
+            Earrings
+          </div>
+        </a>
+      </div>
+      <div class="menu">
+        <a routerLink="/products/bracelate/0">
+          <div class="menu-icon">
+            <img src="assets/bracelet.svg" alt="" />
+            Bracelates
+          </div>
+        </a>
+      </div>
+      <div class="menu necklace">
+        <a routerLink="/products/necklace/2">
+          <div class="menu-icon">
+            <img src="assets/necklace.svg" alt="" />
+            Necklace
+          </div>
+        </a>
+      </div>
+      <div class="menu">
+        <a routerLink="/products/ring/3">
+          <div class="menu-icon">
+            <img src="assets/rings1.svg" alt="" />
+            Rings
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -----------offcanvas---------- -->
+
+<div
+  class="offcanvas cust-canvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-5">
+    <div>
+      <div class="card mb-3" *ngFor="let product of products">
+        <div class="product-card">
+          <div class="left">
+            <img
+              [src]="product.image"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="right">
+            <div class="card-body">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">
+                {{
+                  getDiscount(product.price, product.discount) | currency: "INR"
+                }}
+              </p>
+              <div class="buttons mt-5 cust-canvas">
+                <button  type="button" class="btn btn btn-outline">Remove</button>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="buttons mt-3 mb-3 cust-canvas">
+   <a routerLink="/checkout"> <button   type="button" class="btn btn btn-outline btn-lg">Proceed To Checkout</button></a>
+</div>
+</div>
+<!-- -------model--------- -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          
+
+          <div class="card mb-3" *ngFor="let product of products">
+            <div class="product-card">
+              <div class="left">
+                <img
+                  [src]="product.image"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="right">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <p class="card-text">
+                    {{
+                      getDiscount(product.price, product.discount) | currency: "INR"
+                    }}
+                  </p>
+                  <div class="buttons mt-5 cust-canvas">
+                    <button  type="button" class="btn btn btn-outline">Remove</button>
+                </div>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a routerLink="/" data-bs-dismiss="modal"><button  type="button" class="btn btn-primary">Save changes</button></a>
+        </div>
+      </div>
+    </div>
+  </div>

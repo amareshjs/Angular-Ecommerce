@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+@import"src/variable.scss";
+body{
+    background-color: #f7f7f7;
+}
+.btn-outline {
+    color: $heart-color;
+    background-color: #ffffff;
+    border-color: $heart-color;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  
+  .btn-outline {
+    color:$heart-color;
+    background-color: #ffffff;
+    border-color:$heart-color;
+    font-weight: bold;
+    border-radius: 4.0;
+   
+  }
+  
+  .btn-outline:hover,
+  .btn-outline:active,
+  .btn-outline:focus,
+  .btn-outline.active {
+    background:$heart-color;
+    color: $background;
+    border-color:$heart-color;
+    
+  }
+
+
+a{
+    text-decoration: none;
+}
+
+.product_card{
+    width: 100%;
+}
+.price_heart{
+    display: flex;
+    justify-content: space-between;
+    // color: $text-color;
+}
+.price_heart a{
+    color: $border-color;
+}
+.product_text{
+    color: $text-color-secondary;
+    // font-size: x-large;
+}
+.heart{
+    color: $heart-color;
+    margin-left: 2%;
+}
+.icons{
+    font-size: 1.6rem;
+    width: 29%;
+}
+.page{
+    margin-top: 140px;
+}

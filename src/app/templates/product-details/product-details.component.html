@@ -1,0 +1,63 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container  page">
+    <div *ngIf="page=='home';" class="buttons mb-3">
+        <a routerLink="/">
+            <button type="button" class="btn btn-outline btn-lg">Back</button>
+        </a>
+    </div>
+    <div *ngIf="page!='home'">
+
+        <div *ngIf="row=='0'" class="buttons mb-3">
+            <a routerLink="/products/bracelate/0">
+                <button type="button" class="btn btn-outline btn-lg">Back</button>
+            </a>
+        </div>
+    <div *ngIf="row=='1'" class="buttons mb-3">
+        <a routerLink="/products/earring/1">
+            <button type="button" class="btn btn-outline btn-lg">Back</button>
+        </a>
+    </div>
+    <div *ngIf="row=='2'" class="buttons mb-3">
+        <a routerLink="/products/necklace/2">
+            <button type="button" class="btn btn-outline btn-lg">Back</button>
+        </a>
+    </div>
+    <div *ngIf="row=='3'" class="buttons mb-3">
+        <a routerLink="/products/ring/3">
+            <button type="button" class="btn btn-outline btn-lg">Back</button>
+        </a>
+    </div>
+</div>
+    
+  <div class="row">
+    <div class="col-md-4">
+        <img [src]="singleProduct.image" alt="">
+    </div>
+    <div class="col-md-8">
+        <div class="page-containt">
+            <div class="containt-head">
+                <p id="name">{{singleProduct.name}}</p>
+                <div class="d-flex mt-5 ">
+                    <p id="p" >{{discountedPrice | currency:'INR'}}</p>
+                    <div class="price">
+                        <p class="d-price">{{singleProduct.price | currency:'INR'}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons mt-3">
+                <button (click)="addToCart()" type="button" class="btn btn btn-outline btn-lg">Add to Cart</button>
+            </div>
+            <div class="containt-foot mt-5">
+
+                <p>{{singleProduct.discription}}</p>
+                <p>Hight & Width : {{singleProduct.height_width}}</p>
+                <p>Weight : {{singleProduct.weight}}</p>
+            </div>
+
+
+        </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+@import"src/variable.scss";
+img{
+    width: 100%;
+}
+.containt-head #name{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+#p{
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+.price{
+   
+    text-decoration: line-through;
+    color: $heart-color;
+}
+.d-price{
+    color: #808080;
+    font-size: 1.8rem;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+.containt-foot{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.cust-btn{
+    color: $heart-color !important;
+    border-color: #111 !important;
+}
+.cust-btn:hover{
+    color: #111 !important;
+    background-color: $heart-color;
+    border-color: $heart-color !important;
+}
