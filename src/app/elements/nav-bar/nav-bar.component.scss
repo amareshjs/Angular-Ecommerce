@@ -119,3 +119,12 @@
 .cust-canvas{
   width: 40%;
 }
+#centerbtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a{
+  text-decoration: none;
+  color:$text-color;
+}

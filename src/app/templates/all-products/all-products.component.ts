@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { AddToCartService } from 'src/app/services/add-to-cart.service';
 import { DataServiceService } from 'src/app/services/data-service.service';
 import { WishlistService } from 'src/app/services/wishlist.service';
@@ -17,7 +18,8 @@ export class AllProductsComponent implements OnInit {
   constructor( private dataService:DataServiceService,
     private activatedRoute: ActivatedRoute,
     private addToCartService:AddToCartService,
-    private wishlistService:WishlistService) { }
+    private wishlistService:WishlistService,
+    private toast:NgToastService) { }
 
   ngOnInit(): void {
 
@@ -53,6 +55,7 @@ this.singleProduct=this.products.filter((element:any)=>{
   return element['id']== id; 
 });
 this.addToCartService.setProduct(this.singleProduct[0]);
+this.toast.success({detail:"SUCCESS",summary:'Added in Cart',duration:5000});
 }
 listProduct:any
 addToList(id:any){
@@ -61,6 +64,7 @@ addToList(id:any){
     return element['id']== id; 
   });
   this.wishlistService.setList(this.listProduct[0]);
+  this.toast.success({detail:"SUCCESS",summary:'Added in Wishlist',duration:5000});
   }
   
 }

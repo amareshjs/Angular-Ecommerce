@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ export class WishlistService {
 
   productList: any=[];
   localData:any;
+  wishProductList=new BehaviorSubject<any>('');
 
   constructor() { }
 
@@ -18,6 +20,7 @@ export class WishlistService {
     }
     this.productList.push(product);
     console.log("aarr",this.productList);
+    this.wishProductList.next(this.productList);
     localStorage.setItem('list',JSON.stringify(this.productList));
   }
 

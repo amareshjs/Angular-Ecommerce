@@ -99,7 +99,7 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 1
+            "id": 9
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00351-SS0000-chasing-my-honest-efforts-necklace-in--silver-prd-1-base.jpg",
@@ -110,7 +110,7 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 2
+            "id": 10
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00251-SS0000-see-you-again-large-bracelet--mm-cz-in--silver-prd-1-base.jpg",
@@ -121,7 +121,7 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 3
+            "id": 11
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00282-SS0000-leaf-of-faith-bracelet-in-gold-plated--silver-prd-1-base.jpg",
@@ -132,7 +132,7 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 4
+            "id": 12
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00440-SS0000-link-of-love--stone-necklace-in-gold-plated--silver-prd-1-base.jpg",
@@ -143,7 +143,7 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 5
+            "id": 13
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00282-SS0000-leaf-of-faith-bracelet-in-gold-plated--silver-prd-1-base.jpg",
@@ -154,7 +154,7 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 6
+            "id": 14
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00323-SS0000-chasing-my-burning-passion-necklace-in--silver-prd-1-base.jpg",
@@ -165,7 +165,7 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 7
+            "id": 15
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00323-SS0000-chasing-my-burning-passion-necklace-in--silver-prd-1-base.jpg",
@@ -176,7 +176,7 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 8
+            "id": 16
         }
     ],
     "rings": [
@@ -189,7 +189,7 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 1
+            "id": 17
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00326-SS0000-turning-all-heads-evil-eye-stackable-ring-in-gold-plated--silver-prd-1-base.jpg",
@@ -200,7 +200,7 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 2
+            "id": 18
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00061-SS0000-antique-srasta-step-ring-in--silver-prd-1-model.jpg",
@@ -211,7 +211,7 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 3
+            "id": 19
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00009-SS00RG-shirley-c-ring-in--silver-prd-1-base.jpg",
@@ -222,7 +222,7 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 4
+            "id": 20
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00164-SS0000-owning-my-loud-laugh-ring-in--silver-prd-1-model.jpg",
@@ -233,7 +233,7 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 5
+            "id": 21
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00298-SS0000-see-you-again-medium-ring--mm-in--silver-prd-1-model.jpg",
@@ -244,7 +244,7 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 6
+            "id": 22
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00289-SS0000-antique-pash-sculpture-stackable-ring-in--silver-prd-1-base.jpg",
@@ -255,7 +255,7 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 7
+            "id": 23
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00289-SS0000-antique-pash-sculpture-stackable-ring-in--silver-prd-1-base.jpg",
@@ -266,7 +266,7 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 8
+            "id": 24
         }
     ],
     "bracelets": [
@@ -279,7 +279,7 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 1
+            "id": 25
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00276-SS0000-happier-than-ever-butterfly-bracelet-in--silver-prd-1-base.jpg",
@@ -290,7 +290,7 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 2
+            "id": 26
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00134-SS0000-antique-no-gaitkeeping-bracelet-in--silver-prd-1-base.jpg",
@@ -301,7 +301,7 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 3
+            "id": 27
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00253-SS0000-dusk-till-dawn-solitaire-bracelet-in--silver-prd-1-base.jpg",
@@ -312,7 +312,7 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 4
+            "id": 28
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00248-SS0000-all-of-the-lights-bracelet-in--silver-prd-1-base.jpg",
@@ -323,7 +323,7 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 5
+            "id": 29
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00134-SS0000-antique-no-gaitkeeping-bracelet-in--silver-prd-1-base.jpg",
@@ -334,7 +334,7 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 6
+            "id": 30
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00180-BR0100-baari-barsi-bracelet-in-gold-plated-brass-prd-1-base.jpg",
@@ -345,7 +345,7 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 7
+            "id": 31
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00180-BR0100-baari-barsi-bracelet-in-gold-plated-brass-prd-1-base.jpg",
@@ -356,7 +356,7 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 8
+            "id": 32
         }
     ]
 }

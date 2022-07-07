@@ -1,6 +1,6 @@
 <div class="page container-fluid">
   <div class="up-nav">
-    <div class="logo">Logo</div>
+    <div class="logo"><a href="#">Jewellery Shop</a></div>
     <div class="right-menu">
       <div class="options">
           <div class="option-menu" 
@@ -83,7 +83,7 @@
   </div>
   <div class="offcanvas-body p-5">
     <div>
-      <div class="card mb-3" *ngFor="let product of products">
+      <div class="card mb-3" *ngFor="let product of cartProducts;let i=index">
         <div class="product-card">
           <div class="left">
             <img
@@ -95,13 +95,14 @@
           <div class="right">
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
+              <!-- <h5 class="card-title">{{ i }}</h5> -->
               <p class="card-text">
                 {{
                   getDiscount(product.price, product.discount) | currency: "INR"
                 }}
               </p>
               <div class="buttons mt-5 cust-canvas">
-                <button  type="button" class="btn btn btn-outline">Remove</button>
+                <button  type="button" class="btn btn btn-outline" (click)="removeCartProduct(product.id)">Remove</button>
             </div>
 
             </div>
@@ -110,9 +111,11 @@
       </div>
     </div>
   </div>
-  <div class="buttons mt-3 mb-3 cust-canvas">
-   <a routerLink="/checkout"> <button   type="button" class="btn btn btn-outline btn-lg">Proceed To Checkout</button></a>
-</div>
+  <div id="centerbtn">
+    <div class="buttons mt-3 mb-3 cust-canvas">
+      <a routerLink="/checkout"> <button   type="button" class="btn btn btn-outline btn-lg">Proceed To Checkout</button></a>
+    </div>
+  </div>
 </div>
 <!-- -------model--------- -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -126,7 +129,7 @@
           
           
 
-          <div class="card mb-3" *ngFor="let product of products">
+          <div class="card mb-3" *ngFor="let product of wishProducts;let i = index;">
             <div class="product-card">
               <div class="left">
                 <img
@@ -144,7 +147,7 @@
                     }}
                   </p>
                   <div class="buttons mt-5 cust-canvas">
-                    <button  type="button" class="btn btn btn-outline">Remove</button>
+                    <button  type="button" class="btn btn btn-outline" (click)="removeProduct(product.id)">Remove</button>
                 </div>
     
                 </div>

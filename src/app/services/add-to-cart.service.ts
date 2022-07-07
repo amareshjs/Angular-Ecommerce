@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ export class AddToCartService {
 
   productCart: any=[];
   localData:any;
-
+  cartProductList= new BehaviorSubject<any>('');
 
 
   constructor() { }
@@ -20,6 +21,7 @@ export class AddToCartService {
     }
     this.productCart.push(product);
     console.log("aarr",this.productCart);
+    this.cartProductList.next(this.productCart);
     localStorage.setItem('product',JSON.stringify(this.productCart));
   }
 
