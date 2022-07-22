@@ -3,16 +3,19 @@
     <div class="logo"><a href="#">Jewellery Shop</a></div>
     <div class="right-menu">
       <div class="options">
-          <div class="option-menu" 
+        <div
+          class="option-menu"
           (click)="getList()"
-          data-bs-toggle="modal" data-bs-target="#exampleModal">
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
           <i class="fa-solid fa-heart"></i>
           <label>Wishlist</label>
         </div>
-        <div class="option-menu">
+        <!-- <div class="option-menu">
           <i class="fa fa-gift"></i>
           <label>Rewards</label>
-        </div>
+        </div> -->
         <div
           class="option-menu"
           (click)="getData()"
@@ -83,7 +86,12 @@
   </div>
   <div class="offcanvas-body p-5">
     <div>
-      <div class="card mb-3" *ngFor="let product of cartProducts;let i=index">
+      <h2 *ngIf="cartLength==0" class="text-center"> Your Cart Is Empty...</h2>
+      <div
+        class="card mb-3"
+        *ngFor="let product of cartProducts; let i = index"
+        
+      >
         <div class="product-card">
           <div class="left">
             <img
@@ -102,9 +110,14 @@
                 }}
               </p>
               <div class="buttons mt-5 cust-canvas">
-                <button  type="button" class="btn btn btn-outline" (click)="removeCartProduct(product.id)">Remove</button>
-            </div>
-
+                <button
+                  type="button"
+                  class="btn btn btn-outline"
+                  (click)="removeCartProduct(product.id)"
+                >
+                  Remove
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -113,57 +126,81 @@
   </div>
   <div id="centerbtn">
     <div class="buttons mt-3 mb-3 cust-canvas">
-      <a routerLink="/checkout"> <button   type="button" class="btn btn btn-outline btn-lg">Proceed To Checkout</button></a>
+      <a routerLink="/checkout">
+        <button
+          *ngIf="cartLength != 0"
+          type="button"
+          class="btn btn-outline btn-lg"
+        >
+          Proceed To Checkout
+        </button>
+        </a>
     </div>
   </div>
 </div>
 <!-- -------model--------- -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Wishlist</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          
-          
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Wishlist</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h2 *ngIf="wishListLength==0" class="text-center"> Your Wishlist Is Empty...</h2>
+        <div
+          class="card mb-3"
+          *ngFor="let product of wishProducts; let i = index"
+        >
+          <div class="product-card">
+            <div class="left">
+              <img
+                [src]="product.image"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="right">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">
+                  {{
+                    getDiscount(product.price, product.discount)
+                      | currency: "INR"
+                  }}
+                </p>
 
-          <div class="card mb-3" *ngFor="let product of wishProducts;let i = index;">
-            <div class="product-card">
-              <div class="left">
-                <img
-                  [src]="product.image"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="right">
-                <div class="card-body">
-                  <h5 class="card-title">{{ product.name }}</h5>
-                  <p class="card-text">
-                    {{
-                      getDiscount(product.price, product.discount) | currency: "INR"
-                    }}
-                  </p>
-                  <div class="buttons mt-5 cust-canvas">
-                    <button  type="button" class="btn btn btn-outline" (click)="removeProduct(product.id)">Remove</button>
-                </div>
-    
+                <div class="buttons mt-5 cust-canvas">
+                  <button
+                    type="button"
+                    class="btn btn btn-outline"
+                    (click)="removeProduct(product.id)"
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-
-
-
-
-
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a routerLink="/" data-bs-dismiss="modal"><button  type="button" class="btn btn-primary">Save changes</button></a>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <!-- <a routerLink="/" data-bs-dismiss="modal"><button  type="button" class="btn btn-primary">Save changes</button></a> -->
       </div>
     </div>
   </div>
+</div>
