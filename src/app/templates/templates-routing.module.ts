@@ -7,11 +7,11 @@ import { ListPageComponent } from './list-page/list-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 const routes: Routes = [
   {
-    path: 'singleproduct/:id/:row',
+    path: 'singleproduct/:id',
     component: ProductDetailsComponent,
   },
   {
-    path: 'singleproduct/:id/:row/:page',
+    path: 'singleproduct/:id/:page',
     component: ProductDetailsComponent,
   },
   {

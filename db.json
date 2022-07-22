@@ -1,5 +1,5 @@
 {
-    "earrings": [
+    "products": [
         {
             "image": "https://images.cltstatic.com/media/product/350/AE00564-SS0000-owning-my-sassy-spirit-earrings-in--silver-prd-1-base.jpg",
             "price": "2325",
@@ -9,7 +9,8 @@
             "weight": "123",
             "height_width": "22",
             "material_type": "esd",
-            "id": 1
+            "id": 1,
+            "type":"earrings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AE00576-SS0000-tgif-earrings-in-gold-plated--silver-prd-1-base.jpg",
@@ -20,7 +21,8 @@
             "weight": "123",
             "height_width": "22",
             "material_type": "esd",
-            "id": 2
+            "id": 2,
+            "type":"earrings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AE00859-SS0000-circle-of-life--stone-earrings-in-gold-plated--silver-prd-1-base.jpg",
@@ -31,7 +33,8 @@
             "weight": "123",
             "height_width": "22",
             "material_type": "esd",
-            "id": 3
+            "id": 3,
+            "type":"earrings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AE00859-SS0000-circle-of-life--stone-earrings-in-gold-plated--silver-prd-1-base.jpg",
@@ -42,7 +45,8 @@
             "weight": "123",
             "height_width": "22",
             "material_type": "esd",
-            "id": 4
+            "id": 4,
+            "type":"earrings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AE00844-SS0000-goodbye-haters-evil-eye-earrings-in-gold-plated--silver-prd-1-base.jpg",
@@ -53,7 +57,8 @@
             "weight": "123",
             "height_width": "22",
             "material_type": "esd",
-            "id": 5
+            "id": 5,
+            "type":"earrings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AE00859-SS0000-circle-of-life--stone-earrings-in-gold-plated--silver-prd-1-base.jpg",
@@ -64,7 +69,8 @@
             "weight": "123",
             "height_width": "22",
             "material_type": "esd",
-            "id": 6
+            "id": 6,
+            "type":"earrings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AE00564-SS0000-owning-my-sassy-spirit-earrings-in--silver-prd-1-base.jpg",
@@ -75,7 +81,8 @@
             "weight": "123",
             "height_width": "22",
             "material_type": "esd",
-            "id": 7
+            "id": 7,
+            "type":"earrings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AE00564-SS0000-owning-my-sassy-spirit-earrings-in--silver-prd-1-base.jpg",
@@ -86,10 +93,9 @@
             "weight": "123",
             "height_width": "22",
             "material_type": "esd",
-            "id": 8
-        }
-    ],
-    "necklaces": [
+            "id": 8,
+            "type":"earrings"
+        },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00323-SS0000-chasing-my-burning-passion-necklace-in--silver-prd-1-base.jpg",
             "price": "100",
@@ -99,7 +105,8 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 9
+            "id": 9,
+            "type":"necklaces"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00351-SS0000-chasing-my-honest-efforts-necklace-in--silver-prd-1-base.jpg",
@@ -110,7 +117,8 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 10
+            "id": 10,
+            "type":"necklaces"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00251-SS0000-see-you-again-large-bracelet--mm-cz-in--silver-prd-1-base.jpg",
@@ -121,7 +129,8 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 11
+            "id": 11,
+            "type":"necklaces"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00282-SS0000-leaf-of-faith-bracelet-in-gold-plated--silver-prd-1-base.jpg",
@@ -132,7 +141,8 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 12
+            "id": 12,
+            "type":"necklaces"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00440-SS0000-link-of-love--stone-necklace-in-gold-plated--silver-prd-1-base.jpg",
@@ -143,7 +153,8 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 13
+            "id": 13,
+            "type":"necklaces"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00282-SS0000-leaf-of-faith-bracelet-in-gold-plated--silver-prd-1-base.jpg",
@@ -154,7 +165,8 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 14
+            "id": 14,
+            "type":"necklaces"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00323-SS0000-chasing-my-burning-passion-necklace-in--silver-prd-1-base.jpg",
@@ -165,7 +177,8 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 15
+            "id": 15,
+            "type":"necklaces"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AL00323-SS0000-chasing-my-burning-passion-necklace-in--silver-prd-1-base.jpg",
@@ -176,10 +189,9 @@
             "weight": "34",
             "height_width": "34",
             "material_type": "gold",
-            "id": 16
-        }
-    ],
-    "rings": [
+            "id": 16,
+            "type":"necklaces"
+        },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00289-SS0000-antique-pash-sculpture-stackable-ring-in--silver-prd-1-base.jpg",
             "price": "200",
@@ -189,7 +201,8 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 17
+            "id": 17,
+            "type":"rings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00326-SS0000-turning-all-heads-evil-eye-stackable-ring-in-gold-plated--silver-prd-1-base.jpg",
@@ -200,7 +213,8 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 18
+            "id": 18,
+            "type":"rings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00061-SS0000-antique-srasta-step-ring-in--silver-prd-1-model.jpg",
@@ -211,7 +225,8 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 19
+            "id": 19,
+            "type":"rings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00009-SS00RG-shirley-c-ring-in--silver-prd-1-base.jpg",
@@ -222,7 +237,8 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 20
+            "id": 20,
+            "type":"rings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00164-SS0000-owning-my-loud-laugh-ring-in--silver-prd-1-model.jpg",
@@ -233,7 +249,8 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 21
+            "id": 21,
+            "type":"rings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00298-SS0000-see-you-again-medium-ring--mm-in--silver-prd-1-model.jpg",
@@ -244,7 +261,8 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 22
+            "id": 22,
+            "type":"rings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00289-SS0000-antique-pash-sculpture-stackable-ring-in--silver-prd-1-base.jpg",
@@ -255,7 +273,8 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 23
+            "id": 23,
+            "type":"rings"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AR00289-SS0000-antique-pash-sculpture-stackable-ring-in--silver-prd-1-base.jpg",
@@ -266,10 +285,9 @@
             "weight": "45",
             "height_width": "45",
             "material_type": "efq",
-            "id": 24
-        }
-    ],
-    "bracelets": [
+            "id": 24,
+            "type":"rings"
+        },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00180-BR0100-baari-barsi-bracelet-in-gold-plated-brass-prd-1-base.jpg",
             "price": "3444",
@@ -279,7 +297,8 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 25
+            "id": 25,
+            "type":"bracelets"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00276-SS0000-happier-than-ever-butterfly-bracelet-in--silver-prd-1-base.jpg",
@@ -290,7 +309,8 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 26
+            "id": 26,
+            "type":"bracelets"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00134-SS0000-antique-no-gaitkeeping-bracelet-in--silver-prd-1-base.jpg",
@@ -301,7 +321,8 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 27
+            "id": 27,
+            "type":"bracelets"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00253-SS0000-dusk-till-dawn-solitaire-bracelet-in--silver-prd-1-base.jpg",
@@ -312,7 +333,8 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 28
+            "id": 28,
+            "type":"bracelets"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00248-SS0000-all-of-the-lights-bracelet-in--silver-prd-1-base.jpg",
@@ -323,7 +345,8 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 29
+            "id": 29,
+            "type":"bracelets"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00134-SS0000-antique-no-gaitkeeping-bracelet-in--silver-prd-1-base.jpg",
@@ -334,7 +357,8 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 30
+            "id": 30,
+            "type":"bracelets"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00180-BR0100-baari-barsi-bracelet-in-gold-plated-brass-prd-1-base.jpg",
@@ -345,7 +369,8 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 31
+            "id": 31,
+            "type":"bracelets"
         },
         {
             "image": "https://images.cltstatic.com/media/product/350/AT00180-BR0100-baari-barsi-bracelet-in-gold-plated-brass-prd-1-base.jpg",
@@ -356,7 +381,8 @@
             "weight": "34",
             "height_width": "44",
             "material_type": "asads",
-            "id": 32
+            "id": 32,
+            "type":"bracelets"
         }
     ]
 }

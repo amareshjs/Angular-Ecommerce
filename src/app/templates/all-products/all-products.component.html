@@ -6,9 +6,9 @@
     </a>
 </div>
 
-  <div class="page-align ">
-    <div *ngFor="let product of products; index as i" class="product_card mb-3">
-      <a routerLink="/singleproduct/{{product.id}}/{{row}}">
+  <div class="page-align">
+    <div *ngFor="let product of filterdProduct; index as i" class="product_card mb-3">
+      <a routerLink="/singleproduct/{{product.id}}">
           <img
           class="product_img"
           style="width: 100%"
@@ -26,6 +26,7 @@
               </div>
             </div>
           </div>
-        </div>
-    </div>
+        </div> 
+        <!-- <app-card-element [products]="filterdProduct"></app-card-element> -->
+      </div>
     </div>

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { AddToCartService } from 'src/app/services/add-to-cart.service';
 import { CommonServiceService } from 'src/app/services/common-service.service';
+import { SessionService } from 'src/app/services/session.service';
 import { ToastService } from 'src/app/services/toast.service';
 import { WishlistService } from 'src/app/services/wishlist.service';
 import { DataServiceService } from '../../services/data-service.service';
@@ -13,16 +14,20 @@ import { DataServiceService } from '../../services/data-service.service';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  eData:any
-  bData:any
-  nData:any
-  rData:any
   wishProducts:any
   cartProducts:any
   cartItemList: any;
+  products: any[] = [];
+  bracelates: any[] = [];
+  necklaces: any[] = [];
+  rings: any[] = [];
+  earrings: any[] = [];
+  cartLength=0;
+  wishListLength=0;
 
   constructor(private dataService:DataServiceService,
     private addToCartService: AddToCartService,
+    private sessionService:SessionService,
     private router:Router,
     private wishlistService:WishlistService,
     private commonService:CommonServiceService,
@@ -31,94 +36,73 @@ export class NavBarComponent implements OnInit {
     }
 
   ngOnInit(): void {
-
-    this.dataService.getEarrings().subscribe(
-      val => 
-      this.eData=val
-    );
-
-    this.dataService.getBracelates().subscribe(
-      val => 
-      this.bData=val
-    );
-
-    this.dataService.getNacklaces().subscribe(
-      val => 
-      this.nData=val
-    );
-
-    this.dataService.getRings().subscribe(
-      val => 
-      this.rData=val
-    );  
+    
+    
+    this.dataService.getProducts().subscribe((val)=>{
+      this.products=val;
+      // console.log(this.products);
+      this.getFilterd(this.products);
+    })
+    this.getData();
   }
+
+  getFilterd(data:any){
+    data.filter((element:any)=>{
+      if(element.type==="bracelets"){
+        this.bracelates.push(element);
+  
+      }
+      else if(element.type==="rings"){
+        this.rings.push(element);
+      }
+      else if(element.type==="necklaces"){
+        this.necklaces.push(element);
+      }
+      else if(element.type==="earrings"){
+        this.earrings.push(element);
+      }
+    })
+  }
+
+
 getData(){
-  // this.products=this.addToCartService.getProduct();
-  // console.log("model data",this.products);
-    this.addToCartService.cartProductList.subscribe((res)=>{
-    console.log(res);
+    this.addToCartService.getProduct().subscribe((res)=>{
+    // console.log(res);
     this.cartProducts=res;
   })
+  this.cartLength=this.cartProducts.length;
+  console.log(this.cartLength);
 }
 getDiscount(price:any,discount:any){
   return this.commonService.getDiscountedPrice(price,discount)
 }
 
 getList(){
-  // this.products=this.wishlistService.getList();
-  // console.log("model data",this.products);
-  this.wishlistService.wishProductList.subscribe((res)=>{
+  this.wishlistService.getList().subscribe((res)=>{
     this.wishProducts=res;
   })
+  this.wishListLength=this.wishProducts.length
+
 }
 
 removeProduct(productId: any) {
-  let previousList = localStorage.getItem('list');
-  if (
-    previousList !== undefined &&
-    previousList !== null &&
-    previousList.length !== 0
-  ) {
-    this.cartItemList = JSON.parse(previousList);
-    console.log("remove",this.cartItemList);
-    // this.cartItemList.splice(productId,1);
-    this.cartItemList.map((item: any, index: any) => {
-
-      if (item.id == productId) {
-
-        this.cartItemList.splice(index, 1);
-      }
-    });
-  }
-  this.wishlistService.wishProductList.next(this.cartItemList);
-  localStorage.setItem('list', JSON.stringify(this.cartItemList));
+  console.log(productId)
+  
+  this.wishlistService.removeWishProduct(productId);
   this.toast.success({
     detail: 'SUCCESS',
     summary: 'Product Removed',
     duration: 5000,
   });
+ 
 }
 
 
 removeCartProduct(productId: any) {
   console.log(productId)
-  let previousList = localStorage.getItem('product');
-  if (
-    previousList !== undefined &&
-    previousList !== null &&
-    previousList.length !== 0
-  ) {
-    this.cartItemList = JSON.parse(previousList);
-    console.log("remove",this.cartItemList);
-    this.cartItemList.map((item: any, index: any) => {
-
-      if (item.id == productId){
-        this.cartItemList.splice(index, 1);
-      }
-    });
-  }
-  this.addToCartService.cartProductList.next(this.cartItemList);
-  localStorage.setItem('product', JSON.stringify(this.cartItemList));
+  
+  this.addToCartService.removeCartProduct(productId);
+  this.addToCartService.getCartPrice().subscribe((res)=>{});
   this.toast.success({
     detail: 'SUCCESS',
     summary: 'Product Removed',

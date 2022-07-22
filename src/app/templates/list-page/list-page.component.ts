@@ -9,118 +9,43 @@ import { WishlistService } from 'src/app/services/wishlist.service';
   styleUrls: ['./list-page.component.scss']
 })
 export class ListPageComponent implements OnInit {
-  eData: any
-  bData: any
-  nData: any
-  rData: any
+  products: any[] = [];
+  bracelates: any[] = [];
+  necklaces: any[] = [];
+  rings: any[] = [];
+  earrings: any[] = [];
 
-  constructor(private dataService: DataServiceService,
-    private addToCartService: AddToCartService,
-    private wishlistService:WishlistService,
-    private toast: NgToastService) { }
+
+  constructor(private dataService: DataServiceService) { }
 
   ngOnInit(): void {
 
-    this.dataService.getEarrings().subscribe(
-      val =>
-        this.eData = val
-    );
-
-    this.dataService.getBracelates().subscribe(
-      val =>
-        this.bData = val
-    );
-
-    this.dataService.getNacklaces().subscribe(
-      val =>
-        this.nData = val
-    );
-
-    this.dataService.getRings().subscribe(
-      val =>
-        this.rData = val
-    );
+    this.dataService.getProducts().subscribe((val) => {
+      this.products = val;
+      console.log(this.products);
+      this.getFilterd(this.products);
+    })
   }
 
-  singleProduct: any
-  addToCart(id: any, row: any) {
-    if (row == 0) {
-      this.singleProduct = this.bData.filter((element: any) => {
-        return element['id'] == id;
-      });
-      this.addToCartService.setProduct(this.singleProduct[0]);
-      this.toast.success({detail:"SUCCESS",summary:'Added in Cart',duration:5000});
-       
-    }
+  getFilterd(data: any) {
+    data.filter((element: any) => {
+      if (element.type === "bracelets") {
+        this.bracelates.push(element);
 
-    if (row == 1) {
-      this.singleProduct = this.eData.filter((element: any) => {
-        return element['id'] == id;
-      });
-      this.addToCartService.setProduct(this.singleProduct[0]);
-      this.toast.success({detail:"SUCCESS",summary:'Added in Cart',duration:5000});
-    }
-
-    if (row == 2) {
-      this.singleProduct = this.nData.filter((element: any) => {
-        return element['id'] == id;
-      });
-      this.addToCartService.setProduct(this.singleProduct[0]);
-      this.toast.success({detail:"SUCCESS",summary:'Added in Cart',duration:5000});
-    }
-
-    if (row == 3) {
-      this.singleProduct = this.rData.filter((element: any) => {
-        return element['id'] == id;
-      });
-      this.addToCartService.setProduct(this.singleProduct[0]);
-      this.toast.success({detail:"SUCCESS",summary:'Added in Cart',duration:5000});
-    }
-
-
-
+      }
+      else if (element.type === "rings") {
+        this.rings.push(element);
+      }
+      else if (element.type === "necklaces") {
+        this.necklaces.push(element);
+      }
+      else if (element.type === "earrings") {
+        this.earrings.push(element);
+      }
+    })
+    console.log(this.bracelates,this.rings,this.necklaces,this.earrings)
   }
-
-
-  listProduct: any
-  addToList(id: any, row: any) {
-    if (row == 0) {
-      this.listProduct = this.bData.filter((element: any) => {
-        return element['id'] == id;
-      });
-      this.wishlistService.setList(this.listProduct[0]);
-      this.toast.success({detail:"SUCCESS",summary:'Added In Wishlist',duration:5000});
-       
-    }
-
-    if (row == 1) {
-      this.listProduct = this.eData.filter((element: any) => {
-        return element['id'] == id;
-      });
-      this.wishlistService.setList(this.listProduct[0]);
-      this.toast.success({detail:"SUCCESS",summary:'Added In Wishlist',duration:5000});
-    }
-
-    if (row == 2) {
-      this.listProduct = this.nData.filter((element: any) => {
-        return element['id'] == id;
-      });
-      this.wishlistService.setList(this.listProduct[0]);
-      this.toast.success({detail:"SUCCESS",summary:'Added In Wishlist',duration:5000});
-    }
-
-    if (row == 3) {
-      this.listProduct = this.rData.filter((element: any) => {
-        return element['id'] == id;
-      });
-      this.wishlistService.setList(this.listProduct[0]);
-      this.toast.success({detail:"SUCCESS",summary:'Added In Wishlist',duration:5000});
-    }
-
-
-
-  }
-
 
 
 }
+

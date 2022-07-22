@@ -6,41 +6,16 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root'
 })
 export class DataServiceService {
-  eUrl="http://localhost:3000/earrings/";
-  bUrl="http://localhost:3000/bracelets/";
-  nUrl="http://localhost:3000/necklaces/";
-  rUrl="http://localhost:3000/rings/";
+  Url="http://localhost:3000/products/";
   
 
   constructor(private http:HttpClient) { }
 
-    getEarrings():Observable<any>{
-      return this.http.get<any>(this.eUrl);
-    }
-    getBracelates():Observable<any>{
-      return this.http.get<any>(this.bUrl);
-    }
-    getRings():Observable<any>{
-      return this.http.get<any>(this.rUrl);
-    }
-    getNacklaces():Observable<any>{
-      return this.http.get<any>(this.nUrl);
+    getProducts():Observable<any>{
+      return this.http.get<any>(this.Url);
     }
 
-
-    getSingleEarring(id:any):Observable<any>{
-      return this.http.get<any>(this.eUrl+id);
+    getSingleProducts(data:any):Observable<any>{
+      return this.http.get<any>(this.Url+data);
     }
-
-    getSingleBracelate(id:any):Observable<any>{
-      return this.http.get<any>(this.bUrl+id);
-    }
-    getSingleRing(id:any):Observable<any>{
-      return this.http.get<any>(this.rUrl+id);
-    }
-    getSingleNacklace(id:any):Observable<any>{
-      return this.http.get<any>(this.nUrl+id);
-    }
-    
-
 }

@@ -7,8 +7,6 @@ export class CommonServiceService {
 
   constructor() { }
 
-
-
 getDiscountedPrice(price:any,discount:any){
   return price-(price/discount)
 }

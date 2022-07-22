@@ -62,10 +62,10 @@
                         <p class="card-text">
                           {{ product.price | currency: "INR" }}
                         </p>
-                        <!-- <div class="buttons mt-5 cust-canvas">
-                          <button  type="button" class="btn btn btn-outline">Remove</button>
+                        <div class="buttons mt-5 cust-canvas">
+                          <button *ngIf="!isCouponApplied" (click)="removeCartProduct(product.id)" type="button" class="btn btn btn-outline">Remove</button>
                       </div>
-             -->
+            
                       </div>
                     </div>
                   </div>
@@ -90,7 +90,7 @@
               <p>
                 Apply Coupon
                 <span
-                  *ngIf="isCouponApplied"
+                  *ngIf="!isCouponApplied"
                   style="margin-left: 100px"
                   class="dropdown"
                 >
@@ -143,7 +143,7 @@
                     </li>
                   </ul>
                 </span>
-                <span *ngIf="!isCouponApplied" style="margin-left: 100px">
+                <span *ngIf="isCouponApplied" style="margin-left: 100px">
                   <u id="coupon"> *Coupon Applied</u>
                 </span>
               </p>

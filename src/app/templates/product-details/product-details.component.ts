@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgToastModule, NgToastService } from 'ng-angular-popup';
 import { AddToCartService } from 'src/app/services/add-to-cart.service';
 import { CommonServiceService } from 'src/app/services/common-service.service';
 import { DataServiceService } from 'src/app/services/data-service.service';
@@ -10,74 +11,40 @@ import { DataServiceService } from 'src/app/services/data-service.service';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-  id:any;
-  row:any;
-  page:any;
-  singleProduct:any;
-  discountedPrice:any;
-  localdata:any;
+  id: any;
+  row: any;
+  page: any;
+  singleProduct: any;
+  discountedPrice: any;
+  localdata: any;
 
   constructor(private activatedRoute: ActivatedRoute,
     private route: Router,
     private dataService: DataServiceService,
-    private addtocart:AddToCartService,
-    private commonService:CommonServiceService) { }
+    private addtocart: AddToCartService,
+    private commonService: CommonServiceService,
+    private toast: NgToastService) { }
 
   ngOnInit(): void {
-    this.id=this.activatedRoute.snapshot.params['id'];
-    this.row=this.activatedRoute.snapshot.params['row'];
-    this.page=this.activatedRoute.snapshot.params['page'];
+    this.id = this.activatedRoute.snapshot.params['id'];
+    this.page = this.activatedRoute.snapshot.params['page'];
+    console.log(this.id)
 
-
-
-    if(this.row=== '0'){
-      this.dataService.getSingleBracelate(this.id).subscribe((val)=>{
-        this.singleProduct=val;
-        console.log(this.singleProduct);
-        this.discountedPrice=this.commonService.getDiscountedPrice(this.singleProduct.price,this.singleProduct.discount)
-
-      }
-        );
-    }
-
-    if(this.row=== '1'){
-      this.dataService.getSingleEarring(this.id).subscribe((val)=>{
-        this.singleProduct=val;
-        console.log(this.singleProduct);
-        this.discountedPrice=this.commonService.getDiscountedPrice(this.singleProduct.price,this.singleProduct.discount)
-        // this.singleProduct.price-(this.singleProduct.price/this.singleProduct.discount);
-
-      }
-        );
-    }
-
-    if(this.row=== '2'){
-      this.dataService.getSingleNacklace(this.id).subscribe((val)=>{
-        this.singleProduct=val;
-        console.log(this.singleProduct);
-        this.discountedPrice=this.commonService.getDiscountedPrice(this.singleProduct.price,this.singleProduct.discount)
-
-      }
-        );
-    }
-
-    if(this.row=== '3'){
-      this.dataService.getSingleRing(this.id).subscribe((val)=>{
-        this.singleProduct=val;
-        console.log(this.singleProduct);
-        this.discountedPrice=this.commonService.getDiscountedPrice(this.singleProduct.price,this.singleProduct.discount)
-
-      }
-        );
-    }
+    this.dataService.getSingleProducts(this.id).subscribe((res: any) => {
+      this.singleProduct = res;
+      // console.log(this.singleProduct)
+      this.discountedPrice = this.commonService.getDiscountedPrice(this.singleProduct.price, this.singleProduct.discount);
+    })
   }
 
 
- addToCart(){
-  this.addtocart.setProduct(this.singleProduct)
-  // this.localdata=;
-  console.log("local",this.addtocart.getProduct());
- }
+  addToCart() {
+    this.addtocart.setProduct(this.singleProduct)
+    // this.localdata=;
+    console.log("local", this.addtocart.getProduct());
+    this.toast.success({ detail: "SUCCESS", summary: 'Added in Cart', duration: 5000 });
+
+  }
 
 
 }

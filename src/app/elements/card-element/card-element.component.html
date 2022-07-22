@@ -1,0 +1,20 @@
+<div *ngFor="let product of products; index as i" class="product_card mb-3">
+    <a routerLink="/singleproduct/{{ product.id }}">
+      <img
+        class="product_img"
+        style="width: 100%"
+        [src]="product.image"
+        alt=""
+      />
+      <p class="product_text">{{ product.name }}</p>
+    </a>
+      <div class="card_content">
+        <div class="price_heart">
+          <p class="product_text">{{ product.price| currency:'INR' }}</p>
+          <div class="icons">
+            <a (click)="addToCart(product.id)"><i class="fa-solid fa-cart-plus heart mx-2"></i></a>
+            <a (click)="addToList(product.id)"><i class="fa-solid fa-heart heart"></i></a>
+          </div>
+        </div>
+      </div>
+  </div>
